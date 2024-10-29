@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 router.get('/list', carsController.list);
 router.post('/create', carsController.create);
 router.get('/get/:carID', carsController.carGet, carsController.carByID);
-
-router.delete('/delete/:carID', carsController.delete);
+router.get('/edit/:carID', carsController.carGet, carsController.update);
+router.delete('/delete/:carID', carsController.remove);
 
 module.exports = router;
